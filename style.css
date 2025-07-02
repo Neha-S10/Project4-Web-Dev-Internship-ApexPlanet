@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #fafafa;
+    color: rgb(14, 14, 14);
+    line-height: 1.6;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* transition: background-color 0.3s ease; */
+}
+.section2{
+    padding: 70px 30px;
+    max-width: 1100px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#home{
+    background-color: rgb(176, 221, 177);
+}
+
+nav ul li a:hover,nav ul li a.active {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* About Section */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+#home p {
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Projects Section */
+#projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* border: 1.5px solid rgb(128, 128, 197); */
+}
+
+.project {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+    border: 1.5px solid #2e7d32;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #388E3C;
+}
+
+.project p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #388E3C;
+}
+
+#contact .message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+/* To-Do List Section */
+#todo {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#todo h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2e7d32;
+}
+
+#todo input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#todo button.add-task {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#todo button.add-task:hover {
+    background-color: #388E3C;
+}
+
+#todo ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#todo ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#todo ul li.done {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #d0f0d0;
+}
+
+#todo ul li button.delete {
+    background-color: #e53935;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#todo ul li button.delete:hover {
+    background-color: #ab000d;
+}
+
+#todo ul li span.task-text {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* Product Listing Section */
+#products {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#filters select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    margin-top: 0;
+    color: #388E3C;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.product-card .rating {
+    margin-top: 5px;
+    color: #fbc02d;
+    font-weight: bold;
+}
+
+/* Responsive Navigation for smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #todo input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #todo button.add-task {
+        width: 100%;
+    }
+}
